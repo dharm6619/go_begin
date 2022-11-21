@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/dharm6619/go_begin/conditionals"
+	"github.com/dharm6619/go_begin/loops"
 	"github.com/dharm6619/go_begin/variables"
 )
 
@@ -16,4 +17,8 @@ func main() {
 	fmt.Println("User ", name, " has opt the course ", course)
 	fmt.Println(course, " will take ", conditionals.CourseLengths(), " mins to complete")
 	fmt.Println("Full Name for CLI is : ", conditionals.GetFullName("cli"))
+	fmt.Println("Calling a timer for 5 seconds")
+	loops.SecondsTimer(5)
+	fmt.Println("Following are the courses we offer")
+	loops.CourseOptions()
 }
