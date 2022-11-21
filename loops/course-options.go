@@ -2,6 +2,8 @@ package loops
 
 import (
 	"fmt"
+
+	"github.com/dharm6619/go_begin/loops"
 )
 
 func CourseOptions() string {
@@ -12,7 +14,7 @@ func CourseOptions() string {
 		"Cracking the Coding Interview: Interview Prep"}
 
 	for index, data := range courseOptions {
-		fmt.Println(index+1, ". ", data)
+		fmt.Printf("%d. %s - %f\n", index, data, loops.GetCourseCost(data))
 	}
 	return "Thats All"
 }
