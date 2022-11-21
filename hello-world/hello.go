@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/dharm6619/go_begin/conditionals"
+	datastructs "github.com/dharm6619/go_begin/data_structs"
 	"github.com/dharm6619/go_begin/loops"
 	"github.com/dharm6619/go_begin/variables"
 )
@@ -20,5 +21,11 @@ func main() {
 	fmt.Println("Calling a timer for 5 seconds")
 	loops.SecondsTimer(5)
 	fmt.Println("Following are the courses we offer")
-	loops.CourseOptions()
+	courseData := loops.CourseOptions()
+
+	for index, data := range courseData {
+		fmt.Printf("%v. %s - %v\n", index, data, datastructs.GetCourseCost(data))
+		fmt.Println("Following are the details about the author ")
+		fmt.Println(datastructs.GetCourseMeta(data))
+	}
 }
